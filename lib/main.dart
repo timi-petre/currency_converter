@@ -73,18 +73,17 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               ElevatedButton(
-                child: const Text('Da-i cu banu\''),
+                child: const Text('Da cu banu\''),
                 onPressed: () {
                   final String value = textController.text;
                   final double? doubleValue = double.tryParse(value);
-                  final double test = doubleValue! * euroMoneda;
                   setState(() {
-                    if (doubleValue == 0) {
-                      erorText = 'Please enter a number!';
-                      text = 'Eroare';
+                    if (doubleValue == null) {
+                      erorText = 'Please enter a valid number';
+                      text = '';
                     } else {
-                      erorText = '';
-                      text = ('${test.toStringAsFixed(2)} RON');
+                      erorText = null;
+                      text = '${doubleValue.roundToDouble() * euroMoneda}';
                     }
                   });
                   FocusScope.of(context).requestFocus(FocusNode());
