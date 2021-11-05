@@ -31,10 +31,10 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final textController = TextEditingController();
 
-  double euroMoneda = 4.50;
-
   String text = '';
-  String? erorText;
+  String? errorText;
+
+  double euroMoneda = 4.50;
 
   @override
   Widget build(BuildContext context) {
@@ -53,12 +53,15 @@ class _MainPageState extends State<MainPage> {
               Padding(
                 padding: const EdgeInsetsDirectional.all(20.0),
                 child: TextField(
+                  autofocus: true,
                   keyboardType:
                       const TextInputType.numberWithOptions(decimal: true),
-                  autofocus: true,
                   controller: textController,
                   decoration: InputDecoration(
-                    errorText: erorText,
+                    prefixIcon: const Icon(
+                      Icons.money,
+                    ),
+                    errorText: errorText,
                     hintText: 'Enter the amount in EUR',
                     suffix: IconButton(
                       icon: const Icon(Icons.close),
@@ -79,11 +82,12 @@ class _MainPageState extends State<MainPage> {
                   final double? doubleValue = double.tryParse(value);
                   setState(() {
                     if (doubleValue == null) {
-                      erorText = 'Please enter a valid number';
+                      errorText = 'Please enter a valid number';
                       text = '';
                     } else {
-                      erorText = null;
-                      text = '${doubleValue.roundToDouble() * euroMoneda}';
+                      errorText = null;
+                      double rezultat = doubleValue * euroMoneda;
+                      text = '${rezultat.toStringAsFixed(2)} RON';
                     }
                   });
                   FocusScope.of(context).requestFocus(FocusNode());
