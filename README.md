@@ -7,6 +7,7 @@ https://user-images.githubusercontent.com/12413810/140513206-321c4d6e-ff08-40a4-
 
 <details>
   <summary>Imagine 1</summary>
- https://user-images.githubusercontent.com/12413810/140513467-a31fb1fc-7b66-4bfa-8368-5c3bdd30c236.png
+ ![alt text](https://user-images.githubusercontent.com/12413810/140513467-a31fb1fc-7b66-4bfa-8368-5c3bdd30c236.png)
+ 
 
 </details>
