@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
   String text = '';
   String? errorText;
 
-  double euroMoneda = 4.50;
+  double euroMoneda = 4.95;
 
   @override
   Widget build(BuildContext context) {
