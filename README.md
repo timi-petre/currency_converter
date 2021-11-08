@@ -1,6 +1,6 @@
 # currency_converter
 
-## Currency Converter
+## Currency Converter Tema
 
 Author : [@timi-petre ](https://github.com/timi-petre)
 
