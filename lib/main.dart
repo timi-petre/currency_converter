@@ -95,7 +95,7 @@ class _MainPageState extends State<MainPage> {
               ),
               const SizedBox(height: 10),
               Text(
-                (text),
+                text,
                 style: const TextStyle(fontSize: 24.3),
               ),
             ],
