@@ -4,23 +4,23 @@
 
 Author : [@timi-petre ](https://github.com/timi-petre)
 
-Aplicatia are in componenta sa:
+The application contains:
 
     - Imagine
     - TextField
     - ElevatedButton
     - Text
   
-  TextField contine:
+  TextField contains:
 
     - prefix
     - text
     - suffix
 
 
-Cand prefixul este apasat, se va sterge infrmatia din TextField, si din Text de sub ElevatedButton.
+When the prefix is pressed, the information will be deleted from TextField, and from Text below ElevatedButton.
 
-Deasemena ElevatedButton calculeaza informatia introdusa in TextField cu informatia din moneda Euro.
+ElevatedButton also calculates the information entered in TextField with information in Euro.
 
 Example:
  
