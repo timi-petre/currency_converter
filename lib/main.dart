@@ -86,7 +86,7 @@ class _MainPageState extends State<MainPage> {
                     } else {
                       errorText = null;
                       final double rezultat = doubleValue * euroMoneda;
-                      text = '${rezultat.toStringAsFixed(2)} RON';
+                      text = '${rezultat.toStringAsFixed(2)} RONI';
                     }
                   });
                   FocusScope.of(context).requestFocus(FocusNode());
