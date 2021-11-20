@@ -29,7 +29,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final textController = TextEditingController();
+  final TextEditingController textController = TextEditingController();
 
   String text = '';
   String? errorText;
@@ -44,9 +44,8 @@ class _MainPageState extends State<MainPage> {
         centerTitle: true,
       ),
       body: ListView(
-        children: [
+        children: <Widget>[
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Image.network(
                   'http://vremeanoua.ro/wp-content/uploads/2017/07/atentie-la-bani-bancnote-de-100-lei-falsificate-461784.jpg'),
@@ -76,7 +75,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               ElevatedButton(
-                child: const Text('Da cu banu\''),
+                child: const Text("Da cu banu'"),
                 onPressed: () {
                   final String value = textController.text;
                   final double? doubleValue = double.tryParse(value);
@@ -86,7 +85,7 @@ class _MainPageState extends State<MainPage> {
                       text = '';
                     } else {
                       errorText = null;
-                      double rezultat = doubleValue * euroMoneda;
+                      final double rezultat = doubleValue * euroMoneda;
                       text = '${rezultat.toStringAsFixed(2)} RON';
                     }
                   });
