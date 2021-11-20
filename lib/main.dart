@@ -53,8 +53,7 @@ class _MainPageState extends State<MainPage> {
                 padding: const EdgeInsetsDirectional.all(20.0),
                 child: TextField(
                   autofocus: true,
-                  keyboardType:
-                      const TextInputType.numberWithOptions(decimal: true),
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   controller: textController,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(
